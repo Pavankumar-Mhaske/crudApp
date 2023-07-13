@@ -1,0 +1,112 @@
+/* Form.css */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap");
+:root {
+  --yellow: #ffbb30;
+  --black: #242424;
+  --grey: #818181;
+  --white: #ffffff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+body {
+  background: linear-gradient(90deg, #a4c3fe 0%, #0c23f1 100%);
+  color: #f5e6e6;
+  height: 100%;
+  font-family: "Oswald", sans-serif;
+}
+
+.container {
+  /* border: 5px solid black; */
+  width: 80%;
+}
+
+.container > .header-userlist-1 {
+  color: #f5e6e6;
+  background: linear-gradient(90deg, #c1c6f3 0%, #2a39c6 50%, #031298 100%);
+  box-shadow: 0px 5px 10px var(--black);
+}
+
+.header-userlist-1 > h1 {
+  color: #ffffff;
+  font-family: "Oswald", sans-serif;
+}
+.userlist-table {
+  color: #0d0d0d;
+}
+
+.my-custom-button > img {
+  /* CSS styles for the image inside the button */
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.header-userlist-2 button {
+  transition: transform 0.3s;
+}
+
+/* Styles for the button when hovering */
+.header-userlist-2 button:hover {
+  transform: scale(1.5);
+}
+
+.modal-container {
+  border: 3px solid green;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal-container button {
+  cursor: pointer;
+}
+
+.modal-buttons button {
+  border: 2px solid #1f1f1f;
+  border-radius: 0.6em;
+  color: #1f1f1f;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  font-family: "Montserrat";
+  font-weight: 900;
+  transition: transform 0.3s;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out,
+    transform 0.3s;
+}
+
+.modal-buttons .submit-button button {
+  background-color: transparent;
+  color: #038e34;
+  /* border-color: #031298; */
+}
+.modal-buttons .cancle-button button {
+  background-color: transparent;
+  color: #b4161b;
+}
+
+.modal-buttons button:hover {
+  color: #ffffff;
+  outline: 0;
+  box-shadow: 0 0 40px 40px #1f1f1f inset;
+  transform: scale(1.1);
+}
+
+.modal-container input {
+  background-color: rgba(61, 61, 153, 0.1);
+  padding: 10px;
+}
+
+.input-fields {
+  box-shadow: 0px 5px 10px var(--black);
+}
+
+.modal-container input::placeholder {
+  color: #272e31c0;
+  font-family: "Montserrat";
+}
+
+.modal-container input:focus::placeholder {
+  color: #00ff0069; /* Color on focus */
+}

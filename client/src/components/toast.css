@@ -1,0 +1,25 @@
+.flip-enter {
+  transform: translate(-50%, -50%) rotateX(90deg);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.flip-enter-active {
+  transform: translate(-50%, -50%) rotateX(0);
+  opacity: 1;
+  visibility: visible;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.flip-exit {
+  transform: translate(-50%, -50%) rotateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.flip-exit-active {
+  transform: translate(-50%, -50%) rotateX(90deg);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.5s, opacity 0.5s;
+}

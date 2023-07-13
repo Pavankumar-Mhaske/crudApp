@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+body {
+  background: linear-gradient(90deg, #a4c3fe 0%, #0c23f1 100%);
+  color: #f5e6e6;
+  height: 100%;
+  font-family: "Oswald", sans-serif;
+}
+
+/* Modal.css */
+
+/* Overlay styles */
+.outer-container {
+  position: fixed;
+  border: 10px solid #ccc;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  overflow: auto;
+  border: 2px solid red;
+}
+
+/* Modal styles */
+.ineer-container {
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  right: 20%;
+  bottom: 20%;
+  /* background-color: #758283; */
+  background-image: url("./images/table.jpg");
+  background-size: cover; /* Adjusts the size of the image to cover the entire container */
+  background-position: center; /* Positions the image at the center of the container */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  
+
+  /* padding: 50px; */
+  z-index: 1000;
+  overflow: auto;
+  border: 2px solid red;
+}

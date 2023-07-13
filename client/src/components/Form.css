@@ -1,0 +1,130 @@
+/* Form.css */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap");
+:root {
+  --yellow: #ffbb30;
+  --black: #242424;
+  --grey: #818181;
+  --white: #ffffff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+body {
+  background: linear-gradient(90deg, #a4c3fe 0%, #0c23f1 100%);
+  color: #f5e6e6;
+  height: 100%;
+  font-family: "Oswald", sans-serif;
+}
+
+.form-container {
+  max-width: 900px;
+  background: linear-gradient(180deg, #7da8f7 0%, #1a29af 75%,#1a29af 90%, #010315 100%);
+  padding-bottom: 30px;
+  box-shadow: 0px 5px 10px var(--black);
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  /* border: 2px solid green; */
+}
+
+.form-container h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.form-container .header {
+  background: linear-gradient(90deg, #c1c6f3 0%,#2a39c6 50%, #031298 100%);
+  box-shadow: 0px 5px 10px var(--black);
+}
+
+.form-container .header > h1 {
+  font-size: 40px;
+  text-align: center;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-weight: 500;
+}
+
+.form-container label {
+  font-size: 0.875rem;
+  color: #0D0D0D;
+}
+
+.form-container input {
+  width: 100%;
+  background-color: rgba(61, 61, 153, 0.19);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  outline: none;
+  /* background-color: #fff; */
+  color: #000;
+  transition: background-color 0.5s, color 0.5s, box-shadow 0 0 40px 40px black 1000ms ease-in-out;
+  
+}
+
+input:focus {
+  background: linear-gradient(90deg, #363739 0%, #40495a 50%, #7883e3 100%);
+  color: #cad5e2;
+  box-shadow: 0 0 40px 40px linear-gradient(90deg, #363739 0%, #40495a 50%, #7883e3 100%) inset;
+}
+
+
+/* input:hover {
+  color: #ffffff;
+  background: linear-gradient(90deg, #363739 0%, #40495a 50%, #7883e3 100%);
+  
+} */
+
+.form-container input::placeholder {
+  color:#a7bec1;
+   font-family: "Montserrat";
+}
+
+.form-container input:focus {
+  border-color: #5c5cc4;
+}
+
+button {
+  margin: auto;
+  display: block;
+}
+
+.btn {
+  background-color: transparent;
+  border: 2px solid #1f1f1f;
+  border-radius: 0.6em;
+  color: #1f1f1f;
+  font-size: 1rem;
+  padding: 1.2em 2.5em;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-weight: 900;
+}
+.btn:hover {
+  color: #ffffff;
+  outline: 0;
+}
+
+.lco {
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out, transform 0.3s;
+}
+
+.lco:hover {
+  box-shadow: 0 0 40px 40px #1f1f1f inset;
+  transform: scale(1.05);
+  
+}
+
+
