@@ -6,7 +6,7 @@ import { successIcon } from "./icons";
 import "./toast.css";
 import "./Form.css";
 
-export const Form = () => {
+export const Form = ({BASE_URL}) => {
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
 
@@ -28,7 +28,7 @@ export const Form = () => {
         // icon: <img src={deleteIcon} alt="Delete Icon" />,
       });
     } else {
-      const users = await axios.get("/getUsers");
+      const users = await axios.get(`${BASE_URL}/getUsers`);
       console.log(users);
       const array = users.data.users;
       console.log(array);
@@ -55,7 +55,7 @@ export const Form = () => {
           email: userEmail,
         };
 
-        const res = await axios.post("/createUser", data);
+        const res = await axios.post(`${BASE_URL}/createUser`, data);
 
         toast.dismiss(); // Dismiss any currently displayed toast
         toast.success("User updated successfully!", {

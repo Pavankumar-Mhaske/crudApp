@@ -7,7 +7,7 @@ import "./toast.css";
 import "./UserList.css";
 import Modal from "./Modal";
 
-export const UserList = () => {
+export const UserList = ({ BASE_URL }) => {
   const [userData, setUserData] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [userName, setUserName] = useState("");
@@ -15,7 +15,7 @@ export const UserList = () => {
   const [currentUserId, setCurrentUserId] = useState(null);
 
   const fetchUserData = async () => {
-    const resp = await axios.get("/getUsers");
+    const resp = await axios.get(`${BASE_URL}/getUsers`);
     console.log("response is here ....", resp);
 
     if (resp.data.users.length > 0) {
@@ -55,7 +55,7 @@ export const UserList = () => {
     if (!userName || !userEmail) {
       window.alert("name and email both are required!");
     } else {
-      const resp = await axios.put(`/editUser/${id}`, {
+      const resp = await axios.put(`${BASE_URL}/editUser/${id}`, {
         name: userName,
         email: userEmail,
       });
@@ -85,7 +85,7 @@ export const UserList = () => {
   };
 
   const handleDelete = async (id) => {
-    const deletedUser = await axios.delete(`/deleteUser/${id}`);
+    const deletedUser = await axios.delete(`${BASE_URL}/deleteUser/${id}`);
     toast.dismiss(); // Dismiss any currently displayed toast
     toast.success("User deleted successfully!", {
       position: "top-right",
