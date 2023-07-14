@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const userRoutes = require("./routes/userRoutes");
 const connectToDB = require("./config/db");
+
 const cors = require("cors");
 
 // middleware
